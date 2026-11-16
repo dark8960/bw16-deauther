@@ -1,0 +1,11 @@
+board_manager:
+  additional_urls:
+    - https://raw.githubusercontent.com/Ameba-AIoT/ameba-arduino-d/master/Arduino_package/package_realtek_amebad_index.json
+directory:
+  cache: G:\wifideauth\.arduino\cache
+directories:
+  data: G:\wifideauth\.arduino
+  downloads: G:\wifideauth\.arduino\staging
+  user: G:\wifideauth\.arduino\user
+logging:
+  level: info

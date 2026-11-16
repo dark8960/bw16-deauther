@@ -1,0 +1,25 @@
+1	// =====================================================================
+407	    logEv("扫描超时，已恢复 AP", 'e');
+675	        snprintf(pm, sizeof pm, "信道锁定失败，保持原信道 %d", (int)g_apChannel);
+962	      logEv("HTTP 请求解析失败", 'e');
+1377	    if (g_scanning) { sendJsonRaw(cfd, 400, "{\"err\":\"扫描进行中\"}"); return; }
+1387	      if (idx < 0 || idx >= n) { sendJsonRaw(cfd, 400, "{\"err\":\"目标无效，请重新扫描\"}"); return; }
+1448	    if (g_clientCount == 0) { sendJsonRaw(cfd, 400, "{\"err\":\"本热点上没有设备，先让手机连上 BW16-Deauther\"}"); return; }
+1481	    } else sendJsonRaw(cfd, 200, "{\"ok\":false,\"err\":\"未处于攻击模式\"}");
+1486	    if (g_scanning) { sendJsonRaw(cfd, 400, "{\"err\":\"扫描进行中\"}"); return; }
+1490	    if (idx < 0 || idx >= g_netCnt) { sendJsonRaw(cfd, 400, "{\"err\":\"目标无效，请重新扫描\"}"); return; }
+1501	    snprintf(m, sizeof m, "Clone 已启动: %s (ch %d)", t.ssid, (int)t.ch);
+1512	    else sendJsonRaw(cfd, 200, "{\"ok\":false,\"err\":\"未处于 Clone 模式\"}");
+1517	    if (g_scanning) { sendJsonRaw(cfd, 400, "{\"err\":\"扫描进行中\"}"); return; }
+1523	    if (idx < 0 || idx >= g_netCnt) { sendJsonRaw(cfd, 400, "{\"err\":\"目标无效，请重新扫描\"}"); return; }
+1548	    else sendJsonRaw(cfd, 200, "{\"ok\":false,\"err\":\"未处于 Portal 模式\"}");
+1585	    if (id < 0 || id >= MAX_CAPTURES || !g_caps[id].used) { sendJsonRaw(cfd, 400, "{\"err\":\"无此记录\"}"); return; }
+1588	    if (c.verify == 1 || c.verify == 2 || g_pendingVerify >= 0) { sendJsonRaw(cfd, 400, "{\"err\":\"验证进行中\"}"); return; }
+1598	    if (strcmp(passWanted, g_set.admin_pass) != 0) { sendJsonRaw(cfd, 401, "{\"err\":\"密码错误\"}"); return; }
+1637	      if (l < 1 || l > 31) { sendJsonRaw(cfd, 400, "{\"err\":\"SSID 长度需 1-31\"}"); return; }
+1638	      for (int i = 0; i < l; i++) if (s[i] < 32 || s[i] > 126) { sendJsonRaw(cfd, 400, "{\"err\":\"SSID 含非法字符\"}"); return; }
+1655	      else { sendJsonRaw(cfd, 400, "{\"err\":\"密码长度需 8-63\"}"); return; }
+1662	        for (int i = 0; i < l; i++) if (s[i] < 32 || s[i] > 126) { sendJsonRaw(cfd, 400, "{\"err\":\"含非法字符\"}"); return; }
+1668	      sendJsonRaw(cfd, 400, "{\"err\":\"WPA2 密码至少 8 位\"}"); return;
+1837	  logEv("管理界面: http://" AP_IP_STR "/", 'o');
+1852	  // tearing the radio down inside the route kills the reply ("无法停止攻击")
