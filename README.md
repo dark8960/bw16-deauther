@@ -13,6 +13,14 @@
 
 > 📖 **不会烧录？看详细步骤：[FLASH_GUIDE.md](FLASH_GUIDE.md)**（Arduino IDE 2.x 从安装开发板到上传、排错全覆盖）。
 
+## 界面预览
+
+<p align="center"><img src="assets/ui-deauth.png" width="330" alt="网页控制界面"></p>
+<p align="center"><sub>网页控制界面：扫描 → 选目标 → 调整帧类型/间隔 → 启动 Deauth，全程在浏览器完成</sub></p>
+
+<p align="center"><img src="assets/board-led.jpg" width="640" alt="板载 RGB 状态灯"></p>
+<p align="center"><sub>板载 RGB 状态灯：空闲 <b>绿色</b> ｜ 攻击 2.4GHz <b>红色</b> ｜ 攻击 5GHz <b>蓝色</b>（图中为空闲状态）</sub></p>
+
 ## 功能
 
 | 模块 | 说明 |
